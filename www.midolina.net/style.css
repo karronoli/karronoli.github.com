@@ -1,0 +1,118 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+ul.menu_wrapper, li.menu-current{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;/* scroll:scroll fixed:not scroll */
+	background-position: left top;/* x y */
+	background-color: #ffffff;
+}
+
+div.all{
+	text-align: center;
+}
+
+div.wrapper{
+    position:relative;
+    width:100%;
+    font-size:small;
+    text-align:center;
+
+}
+
+div.notice{
+	border-width: 1px 1px 1px 1px;
+	border-style: solid;
+	border-color: green;
+    width: 65%;
+    padding: 0;
+    margin: 0;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    position:relative;
+
+}
+
+div.twitterbox{
+	width: 97%;
+}
+
+div.article{
+	padding: 5px 0 0 15px;
+/*	float: left;*/
+}
+
+div.menubar{
+    clear: left;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.bookcontents{
+	width: 50%
+}
+
+.topic{
+	border-width: 0 0 3px 8px;
+	border-style: solid;
+	border-color: green;
+	font-size: 18pt;
+	margin: 0;
+	padding: 0 0 0 16px;
+	background-color: #a3d6a3;
+	clear:left;
+}
+
+a:link img, a:visited img, a:active img, a:hover img{
+	border: none;
+}
+
+a.tab{
+	text-decoration: none;
+	
+}
+
+a.tab:link{
+	color: blue;
+}
+
+a.tab:visited{
+	color: blue;
+}
+
+ul.menu_wrapper{
+	height: 20px;
+}
+
+li.menu-current{
+	display: block;
+	width: 100px;
+	font-size: 13pt;
+	float: left;
+	background-color: #a3d6a3;
+	padding: 5px 0 5px 0;
+}
+
+li.menu{
+	display: block;
+	width: 100px;
+	font-size: 13pt;
+	float: left;
+	padding: 5px 0 5px 0;
+}
+
+#footer{
+	color: #000000;
+}
+

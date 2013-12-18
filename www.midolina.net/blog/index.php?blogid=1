@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/base.css" />
+<!--[if IE 5.5000 | IE 6]><link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/ie6.css" /><![endif]-->
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/red01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/blue01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/yellow01.css" />
+-->
+<title>みどりな組Blog</title>
+</head>
+<body><div id="body">
+
+<div id="header">
+<h1>
+<a href="http://www.midolina.net/blog/">みどりな組Blog</a>
+</h1>
+</div>
+
+<div id="mainwrapper">
+<h2></h2>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=37">C83に向けてやりたいなーと思ってること</a>
+<span class="small">
+[<a href="index.php?catid=4">コミケ</a>]
+</span>
+</h3>
+<p class="date">2012年08月20日</p>
+
+<div class="ibody">
+SDR(=Software Defined Radio)にとっても興味ある4アマのkarronoliです．C83はやる気出します．<p class="morelink"><a href="index.php?itemid=37">&lt;C83に向けてやりたいなーと思ってること&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=35">ncursesのコード</a>
+<span class="small">
+[<a href="index.php?catid=3">おしらせ</a>]
+</span>
+</h3>
+<p class="date">2011年05月08日</p>
+
+<div class="ibody">
+C79で書いたncursesネタのコードをアップロードしました。<br />
+<br />
+<a href="http://www.midolina.net/blog/index.php?itemid=30">詳細はこちら</a><br />
+<br />
+あと、ちょっとだけサイトの修正をしました。<br />
+直すべきところがまだまだあるので、<br />
+追々やっていきたいと思います。<br />
+<br />
+んでは。
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=32">C79おつかれさまでした</a>
+<span class="small">
+[<a href="index.php?catid=1">総合</a>]
+</span>
+</h3>
+<p class="date">2011年01月08日</p>
+
+<div class="ibody">
+あけましておめでとうございます。<br />
+今年も「みどりな組」をよろしくおねがいいたします。<br />
+<br />
+と、遅い新年のあいさつでしたが、<br />
+もっと遅いコミケお疲れコメントを書きます↑↑<br />
+<br />
+<p class="morelink"><a href="index.php?itemid=32">&lt;C79おつかれさまでした&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=30">nCurses入門なの！のソース</a>
+<span class="small">
+[<a href="index.php?catid=4">コミケ</a>]
+</span>
+</h3>
+<p class="date">2011年01月08日</p>
+
+<div class="ibody">
+長らくお待たせしました。<br />
+ようやくアップロードします。<br />
+思えば、半年前・・・以下略<br />
+<br />
+簡単な説明はソース内のコメントにあります。<br />
+細かい使い方とかは後ほど書きます。<br />
+<br />
+<a href="http://www.midolina.net/download/C79/badapple.c">ソース(badapple.c)</a><br />
+<br />
+以上です。
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=29">C79ネタclose</a>
+<span class="small">
+[<a href="index.php?catid=2">つぶやき</a>]
+</span>
+</h3>
+<p class="date">2010年12月26日</p>
+
+<div class="ibody">
+karronoliです．一応C79ネタが書きあがったので軽い報告などでもしようかと．<p class="morelink"><a href="index.php?itemid=29">&lt;C79ネタclose&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=27">ネタができました。</a>
+<span class="small">
+[<a href="index.php?catid=1">総合</a>]
+</span>
+</h3>
+<p class="date">2010年11月17日</p>
+
+<div class="ibody">
+みどりな第4号に書くネタができました。<br />
+<br />
+とりあえず、動画です。<br />
+<a href="http://www.nicovideo.jp/watch/sm12762337">http://www.nicovideo.jp/watch/sm12762337</a> (ニコニコ)<br />
+<a href="http://www.youtube.com/watch?v=M7xuKa4Azd8">http://www.youtube.com/watch?v=M7xuKa4Azd8</a> (Youtube)<br />
+<br />
+＜続く＞<br />
+<br />
+<p class="morelink"><a href="index.php?itemid=27">&lt;ネタができました。&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=25">C79当選！</a>
+<span class="small">
+[<a href="index.php?catid=1">総合</a>]
+</span>
+</h3>
+<p class="date">2010年10月30日</p>
+
+<div class="ibody">
+C79当選しました！<br />
+3日目の31日(金) 東 "ヘ"-51bです！<br />
+よろしくおねがいします！<br />
+<br />
+＜続く＞<br />
+<br />
+<p class="morelink"><a href="index.php?itemid=25">&lt;C79当選！&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=23">C78終了！</a>
+<span class="small">
+[<a href="index.php?catid=1">総合</a>]
+</span>
+</h3>
+<p class="date">2010年08月17日</p>
+
+<div class="ibody">
+こんにちは、C78が終了して2日過ぎました。<br />
+いかがお過ごしでしょうか？<br />
+amichangはコミケ終了の次の日に都内をTatsukiさんと走ったんですが、<br />
+疲れが残っていたらしく、いまでもへとへとになってます。<br />
+<br />
+≪続く≫<p class="morelink"><a href="index.php?itemid=23">&lt;C78終了！&nbsp;のつづき&gt;</a></p>
+
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=21">【修正】ダウンロードリンクを修正しました</a>
+<span class="small">
+[<a href="index.php?catid=3">おしらせ</a>]
+</span>
+</h3>
+<p class="date">2010年08月07日</p>
+
+<div class="ibody">
+バックナンバーで公開しているダウンロードのリンクが<br />
+切れていたので、修正しました。<br />
+これにより、<br />
+・みどりな第1号のダウンロード<br />
+・みどりな第2号サンプルのダウンロード<br />
+が可能になりました。
+</div>
+</div>
+
+<div class="item">
+<h3 class="ititle">
+<a href="index.php?itemid=19">あと11日</a>
+<span class="small">
+[<a href="index.php?catid=1">総合</a>]
+</span>
+</h3>
+<p class="date">2010年08月03日</p>
+
+<div class="ibody">
+・karronoliくんの記事 95%完了<br />
+→最終稿提出待ち<br />
+・Tatsukiさんの記事 95%完了<br />
+→最終稿提出待ち<br />
+<br />
+そのほかは動きなし。<br />
+全員、いい感じに完成に近づいてます。<br />
+<br />
+ちなみにnCursesの記事は、<br />
+時間とページ数の問題で書けませんでした。。。<br />
+<br />
+というか、これ毎日書かなくてもいいかｗ
+</div>
+</div>
+
+
+</div>
+
+<div id="sidebar">
+<dl class="menu">
+<dt>カテゴリー</dt>
+<dd><a href="index.php?catid=3&amp;blogid=1">おしらせ</a></dd>
+<dd><a href="index.php?catid=2&amp;blogid=1">つぶやき</a></dd>
+<dd><a href="index.php?catid=4&amp;blogid=1">コミケ</a></dd>
+<dd><a href="index.php?catid=1&amp;blogid=1">総合</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>最近の記事</dt>
+<dd><a href="index.php?itemid=37">C83に向けてやりたいなーと思ってること <small>(12.08.20)</small></a></dd><dd><a href="index.php?itemid=35">ncursesのコード <small>(11.05.08)</small></a></dd><dd><a href="index.php?itemid=32">C79おつかれさまでした <small>(11.01.08)</small></a></dd><dd><a href="index.php?itemid=30">nCurses入門なの！のソース <small>(11.01.08)</small></a></dd><dd><a href="index.php?itemid=29">C79ネタclose <small>(10.12.26)</small></a></dd><dd><a href="index.php?itemid=27">ネタができました。 <small>(10.11.17)</small></a></dd><dd><a href="index.php?itemid=25">C79当選！ <small>(10.10.30)</small></a></dd><dd><a href="index.php?itemid=23">C78終了！ <small>(10.08.17)</small></a></dd><dd><a href="index.php?itemid=21">【修正】ダウンロードリンクを修正しました <small>(10.08.07)</small></a></dd><dd><a href="index.php?itemid=19">あと11日 <small>(10.08.03)</small></a></dd>
+</dl>
+
+<dl class="menu">
+<dt>いままでの記事</dt>
+<dd><a href="index.php?blogid=1&amp;archive=2012-08">2012.08</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2011-05">2011.05</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2011-01">2011.01</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-12">2010.12</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-11">2010.11</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-10">2010.10</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-08">2010.08</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-06">2010.06</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-05">2010.05</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>ナビゲーション</dt>
+<dd><a href="index.php?blogid=1">今日</a></dd>
+<dd><a href="index.php?archivelist=1">過去ログ</a></dd>
+</dl>
+
+<dl class="menu">
+<dt>リンク</dt>
+<dd><a href="../index.html" title="みどりな組TOP">みどりな組TOP</a></dd>
+<dd><a href="http://aminocyclo.blogspot.com/" title="#aminocyclo">#aminocyclo</a></dd>
+</dl>
+
+<dl id="search">
+<dt>検索</dt>
+<dd>
+<form method="get" action="index.php">
+	<div class="searchform">
+<input type="hidden" name="amount" value="0" />
+<input type="hidden" name="blogid" value="1" />
+		<input name="query" alt="検索キーワード" class="formfield" size="10" maxlength="60" accesskey="4" value="" />
+		<input type="submit" alt="検索" value="検索" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+
+<dl id="login">
+<dt>ログイン</dt>
+<dd>
+<a id="nucleus_lf"></a>
+<form method="post" action="#nucleus_lf">
+	<div class="loginform">
+<input type="hidden" name="action" value="login" />
+		
+
+		<label for="nucleus_lf_name" accesskey="l">ログインID:</label>
+		<input id="nucleus_lf_name" name="login" size="10" value="" class="formfield" />
+
+		<label for="nucleus_lf_pwd">パスワード:</label>
+		<input id="nucleus_lf_pwd" name="password" size="10" type="password" value="" class="formfield" />
+
+		<input type="checkbox" value="1" name="shared" id="nucleus_lf_shared" />
+		<label for="nucleus_lf_shared">このPCを他の人と共用する</label>
+
+		<input type="submit" alt="ログイン" value="ログイン" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+</div>
+
+<div id="footer">Powered by 
+| <a href="http://nucleuscms.org">nucleus</a>
+| <a href="http://hanamachi.com">hanamachi-Ya!</a>
+</div>
+
+</div>
+</body>
+</html>

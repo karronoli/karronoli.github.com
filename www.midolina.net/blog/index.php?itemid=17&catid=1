@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/base.css" />
+<!--[if IE 5.5000 | IE 6]><link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/ie6.css" /><![endif]-->
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/red01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/blue01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/yellow01.css" />
+-->
+<title>あと12日 &raquo; みどりな組Blog</title>
+</head>
+<body><div id="body">
+
+<div id="header">
+<h1>
+<a href="http://www.midolina.net/blog/">みどりな組Blog</a>
+<span class="desc"></span>
+</h1>
+</div>
+
+<div id="mainwrapper">
+<p class="cname"><a href="index.php?catid=1">総合</a></p>
+<div class="item">
+<h2 class="ititle">あと12日</h2>
+<p class="date">2010年08月02日</p>
+
+<div class="ibody">
+現在の進行は<br />
+<br />
+・karronoliくんの記事 90%完了<br />
+→推敲中<br />
+・amichangの記事 90%完了 <br />
+→推敲中<br />
+・Tatsukiさんの記事 90%完了<br />
+→推敲中<br />
+・表紙 50%完了<br />
+→イラストまで完了(Tatsukiさんthx)<br />
+・製本 0%<br />
+→未着手<br />
+<br />
+以上な感じです。<br />
+karronoliくんがマッハで仕上げてくれたおかげで、<br />
+足並みそろいました。<br />
+現在、校閲中（といっても、校閲してるのが自分なのでぜんぜんです。）<br />
+
+
+</div>
+</div>
+
+<div id="coment">
+<h3>コメント</h3>
+<h4>
+<a href="http://antiagingcreamreviews.info/where-can-i-buy-ovvio-anti-aging-cream/">Is OVVIO anti-aging a scam?</a>
+<span class="date">(2012年02月08日&nbsp;07:39:27)</span>
+</h4>
+
+<div class="cbody">
+Terrific post, I've bookmarked this page and have a feeling I'll be returning to it usually.
+</div>
+
+
+
+<h3>コメント送信</h3>
+<a id="nucleus_cf"></a>
+<form method="post" action="#nucleus_cf">
+	<div class="commentform">
+<input type="hidden" name="action" value="addcomment" />
+<input type="hidden" name="url" value="index.php?itemid=17&amp;catid=1" />
+<input type="hidden" name="itemid" value="17" />
+		
+
+		<label for="nucleus_cf_body">コメント:</label>
+		<textarea name="body" class="formfield" cols="40" rows="10" id="nucleus_cf_body"></textarea>
+
+		<label for="nucleus_cf_name">お名前:</label>
+		<input name="user" size="40" maxlength="40" value="" class="formfield" id="nucleus_cf_name" />
+
+		<label for="nucleus_cf_mail">あなたのサイトのURL:</label>
+		<input name="userid" size="40" maxlength="60" value="" class="formfield" id="nucleus_cf_mail" />
+
+		<label for="nucleus_cf_email">メールアドレス:</label>
+		<input name="email" size="40" maxlength="100" value="" class="formfield" id="nucleus_cf_email" />
+
+		<br />
+<label for="nucleus_cf_verif"><img src="http://www.midolina.net/blog/action.php?action=plugin&amp;name=Captcha&amp;type=captcha&amp;key=35f0aca829b81f6aff23ebeaa0a72319"  width="231" height="72 " alt="captcha image, to tell computers and humans apart." title="Please enter the string of characters appearing in this picture in the input field below." /></label>
+<br />
+<label for="nucleus_cf_verif">画像に表示されている文字を入力してください:</label><input name="ver_sol" size="6" maxlength="6" value="" class="formfield" id="nucleus_cf_verif" />
+<input name="ver_key" type="hidden" value="35f0aca829b81f6aff23ebeaa0a72319" />
+
+		<input type="checkbox" value="1" name="remember" id="nucleus_cf_remember"  />
+		<label for="nucleus_cf_remember">情報を記憶しておく</label>
+
+		<input type="submit" alt="コメントを追加" value="コメントを追加" class="formbutton" />
+	</div>
+</form>
+
+</div>
+</div>
+
+<div id="sidebar">
+<dl class="menu">
+<dt>カテゴリー</dt>
+<dd><a href="index.php?catid=3&amp;blogid=1">おしらせ</a></dd>
+<dd><a href="index.php?catid=2&amp;blogid=1">つぶやき</a></dd>
+<dd><a href="index.php?catid=4&amp;blogid=1">コミケ</a></dd>
+<dd><a href="index.php?catid=1&amp;blogid=1">総合</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>最近の記事</dt>
+<dd><a href="index.php?itemid=32&amp;catid=1">C79おつかれさまでした <small>(11.01.08)</small></a></dd><dd><a href="index.php?itemid=27&amp;catid=1">ネタができました。 <small>(10.11.17)</small></a></dd><dd><a href="index.php?itemid=25&amp;catid=1">C79当選！ <small>(10.10.30)</small></a></dd><dd><a href="index.php?itemid=23&amp;catid=1">C78終了！ <small>(10.08.17)</small></a></dd><dd><a href="index.php?itemid=19&amp;catid=1">あと11日 <small>(10.08.03)</small></a></dd><dd><a href="index.php?itemid=17&amp;catid=1">あと12日 <small>(10.08.02)</small></a></dd><dd><a href="index.php?itemid=15&amp;catid=1">あとすこし <small>(10.08.01)</small></a></dd><dd><a href="index.php?itemid=6&amp;catid=1">Lisp Machine的な何か <small>(10.05.30)</small></a></dd>
+</dl>
+
+<dl class="menu">
+<dt>いままでの記事</dt>
+<dd><a href="index.php?blogid=1&amp;archive=2011-01&amp;catid=1">2011.01</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-11&amp;catid=1">2010.11</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-10&amp;catid=1">2010.10</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-08&amp;catid=1">2010.08</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-05&amp;catid=1">2010.05</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>リンク</dt>
+<dd><a href="../index.html" title="みどりな組TOP">みどりな組TOP</a></dd>
+<dd><a href="http://aminocyclo.blogspot.com/" title="#aminocyclo">#aminocyclo</a></dd>
+</dl>
+
+<dl class="menu">
+<dt>ナビゲーション</dt>
+<dd><a href="index.php?itemid=19&amp;catid=1">前の記事</a></dd>
+<dd><a href="index.php?itemid=15&amp;catid=1">次の記事</a></dd>
+<dd><a href="index.php?blogid=1&amp;catid=1">今日</a></dd>
+<dd><a href="index.php?archivelist=1&amp;catid=1">過去ログ</a></dd>
+</dl>
+
+<dl id="search">
+<dt>検索</dt>
+<dd>
+<form method="get" action="index.php">
+	<div class="searchform">
+<input type="hidden" name="amount" value="0" />
+<input type="hidden" name="blogid" value="1" />
+		<input name="query" alt="検索キーワード" class="formfield" size="10" maxlength="60" accesskey="4" value="" />
+		<input type="submit" alt="検索" value="検索" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+
+<dl id="login">
+<dt>ログイン</dt>
+<dd>
+<a id="nucleus_lf"></a>
+<form method="post" action="#nucleus_lf">
+	<div class="loginform">
+<input type="hidden" name="action" value="login" />
+		
+
+		<label for="nucleus_lf_name" accesskey="l">ログインID:</label>
+		<input id="nucleus_lf_name" name="login" size="10" value="" class="formfield" />
+
+		<label for="nucleus_lf_pwd">パスワード:</label>
+		<input id="nucleus_lf_pwd" name="password" size="10" type="password" value="" class="formfield" />
+
+		<input type="checkbox" value="1" name="shared" id="nucleus_lf_shared" />
+		<label for="nucleus_lf_shared">このPCを他の人と共用する</label>
+
+		<input type="submit" alt="ログイン" value="ログイン" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+</div>
+
+<div id="footer">Powered by 
+| <a href="http://nucleuscms.org">nucleus</a>
+| <a href="http://hanamachi.com">hanamachi-Ya!</a>
+</div>
+
+</div>
+</body>
+</html>

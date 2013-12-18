@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja-JP" lang="ja-JP">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/base.css" />
+<!--[if IE 5.5000 | IE 6]><link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/ie6.css" /><![endif]-->
+
+<!--
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/red01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/blue01.css" />
+<link rel="stylesheet" type="text/css" href="http://www.midolina.net/blog/skins/gospel/yellow01.css" />
+-->
+<title>みどりな組Blog：1997年  6��月の記事</title>
+</head>
+<body><div id="body">
+
+<div id="header">
+<h1>
+<a href="http://www.midolina.net/blog/">みどりな組Blog</a>
+<span class="desc"></span>
+</h1>
+</div>
+
+<div id="mainwrapper">
+<h2>みどりな組Blog：おしらせ：1997年  6��月の記事</h2>
+</div>
+
+<div id="sidebar">
+<dl class="menu">
+<dt>カテゴリー</dt>
+<dd><a href="index.php?catid=3&amp;blogid=1&amp;archive=1997-06">おしらせ</a></dd>
+<dd><a href="index.php?catid=2&amp;blogid=1&amp;archive=1997-06">つぶやき</a></dd>
+<dd><a href="index.php?catid=4&amp;blogid=1&amp;archive=1997-06">コミケ</a></dd>
+<dd><a href="index.php?catid=1&amp;blogid=1&amp;archive=1997-06">総合</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>最近の記事</dt>
+<dd><a href="index.php?itemid=35&amp;catid=3">ncursesのコード <small>(11.05.08)</small></a></dd><dd><a href="index.php?itemid=21&amp;catid=3">【修正】ダウンロードリンクを修正しました <small>(10.08.07)</small></a></dd><dd><a href="index.php?itemid=11&amp;catid=3">当選しました <small>(10.06.06)</small></a></dd>
+</dl>
+
+<dl class="menu">
+<dt>いままでの記事</dt>
+<dd><a href="index.php?blogid=1&amp;archive=2011-05&amp;catid=3">2011.05</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-08&amp;catid=3">2010.08</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=2010-06&amp;catid=3">2010.06</a></dd>
+
+</dl>
+
+<dl class="menu">
+<dt>ナビゲーション</dt>
+<dd><a href="index.php?blogid=1&amp;archive=1997-05&amp;catid=3">前の月</a></dd>
+<dd><a href="index.php?blogid=1&amp;archive=1997-07&amp;catid=3">次の月</a></dd>
+<dd><a href="index.php?blogid=1&amp;catid=3">今日</a></dd>
+<dd><a href="index.php?archivelist=1&amp;catid=3">過去ログ</a></dd>
+</dl>
+
+<dl id="search">
+<dt>検索</dt>
+<dd>
+<form method="get" action="index.php">
+	<div class="searchform">
+<input type="hidden" name="amount" value="0" />
+<input type="hidden" name="blogid" value="1" />
+		<input name="query" alt="検索キーワード" class="formfield" size="10" maxlength="60" accesskey="4" value="" />
+		<input type="submit" alt="検索" value="検索" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+
+<dl id="login">
+<dt>ログイン</dt>
+<dd>
+<a id="nucleus_lf"></a>
+<form method="post" action="#nucleus_lf">
+	<div class="loginform">
+<input type="hidden" name="action" value="login" />
+		
+
+		<label for="nucleus_lf_name" accesskey="l">ログインID:</label>
+		<input id="nucleus_lf_name" name="login" size="10" value="" class="formfield" />
+
+		<label for="nucleus_lf_pwd">パスワード:</label>
+		<input id="nucleus_lf_pwd" name="password" size="10" type="password" value="" class="formfield" />
+
+		<input type="checkbox" value="1" name="shared" id="nucleus_lf_shared" />
+		<label for="nucleus_lf_shared">このPCを他の人と共用する</label>
+
+		<input type="submit" alt="ログイン" value="ログイン" class="formbutton" />
+	</div>
+</form>
+</dd>
+</dl>
+</div>
+
+<div id="footer">Powered by 
+| <a href="http://nucleuscms.org">nucleus</a>
+| <a href="http://hanamachi.com">hanamachi-Ya!</a>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,323 @@
+@charset "UTF-8";
+
+/*-------------------------------------------------
+  基本設定
+-------------------------------------------------*/
+*{
+	margin:0px;
+	padding:0px;
+	font-family: sans-serif;
+	color:#333;
+}
+body{text-align:center;}
+a{color:#009;text-decoration:none;}
+a:hover{color:#c03;}
+
+
+/*-------------------------------------------------
+  センター合わせ用
+-------------------------------------------------*/
+#body{
+	text-align:left;
+	width:800px;
+	margin:0px auto;
+}
+
+
+/*-------------------------------------------------
+  レイアウト
+-------------------------------------------------*/
+#header{margin:0;}
+#mainwrapper{width:530px;margin:0 10px;overflow:hidden;float:left;}
+#sidebar{width:230px;margin:30px 0 10px 0;padding:10px 0 0 0;float:left;}
+
+/*左メニューにする時はコメントを解除してください。
+div#mainwrapper,
+div#sidebar{
+	float:right
+}*/
+
+
+/*-------------------------------------------------
+  ヘッダー
+-------------------------------------------------*/
+#header{
+	border-bottom:2px solid #666;
+	height:90px;
+}
+#header h1{
+	padding:10px 0 0 20px;
+	height:40px;
+}
+#header h1 a{
+	font-size:22px;
+	letter-spacing:0.1em;
+}
+#header h1 .desc{
+	font-size:12px;
+	margin-left:10px;
+}
+
+
+/*-------------------------------------------------
+  アサイド
+-------------------------------------------------*/
+#sidebar dl{
+	margin:0 5px 20px 5px;
+}
+#sidebar dl dt{
+	border-bottom:1px #ccc solid;
+	border-left:10px #ccc solid;
+	padding-left:5px;
+	font-weight:bold;
+	font-size:10pt;
+	margin-bottom:5px;
+}
+#sidebar dd{
+	margin-left:5px;
+	font-size:10pt;
+	line-height:20px;
+}
+#sidebar .menu dd{
+	border-bottom:1px #dedede solid;
+}
+#sidebar dd  a{
+	display:block;
+	padding-left:5px;
+	font-size:10pt;
+}
+#sidebar dd  a small{
+	font-size:80%;
+}
+
+
+/*-------------------------------------------------
+  タイトルまわり
+-------------------------------------------------*/
+#mainwrapper h2{
+	margin:5px 0 60px 0;
+	padding:0;
+	font-size:12px;
+	font-weight:normal;
+	border:none;
+}
+#mainwrapper h2.ititle{
+	margin:0 0 5px 0;
+	padding:0 0 5px 50px;
+	text-align:left;
+	font-size:14pt;
+	font-weight:bold;
+	letter-spacing:0.2em;
+	border-bottom:1px #999 solid;
+}
+#mainwrapper h2.userinfo,
+#mainwrapper h2.error{
+	margin:80px 0 5px 0;
+	padding:0 0 5px 50px;
+	text-align:left;
+	font-size:14pt;
+	font-weight:bold;
+	letter-spacing:0.2em;
+	border-bottom:1px #999 solid;
+}
+#mainwrapper h3.ititle{
+	font-size:14pt;
+	line-height:1em;
+	padding:0 0 5px 10px ;
+	border-bottom:1px #ccc solid;
+}
+#archive h3{
+	font-size:12pt;
+	line-height:1.2em;
+	padding:0 0 5px 20px ;
+	margin:0 0 10px 0;
+	border-bottom:1px #ccc solid;
+}
+#mainwrapper h2 .small,
+#mainwrapper h3 .small{
+	font-size:66%;
+	font-weight:normal;
+	letter-spacing:0em;
+}
+#mainwrapper .cname{
+	margin:60px 0 0 0;
+	padding:0;
+	font-size:10pt;
+}
+
+
+/*-------------------------------------------------
+  本文まわり
+-------------------------------------------------*/
+#mainwrapper .date{
+	margin:5px 0 10px 10px;
+}
+#mainwrapper .ibody{
+	margin:0 0 40px 20px;
+	padding-right:30px;
+	line-height:1.8em;
+}
+#mainwrapper .ibody .morelink{
+	text-align:right;
+}
+
+#mainwrapper .searchform{
+	text-align:right;
+	margin:0 30px 20px 0;
+}
+
+
+/*-------------------------------------------------
+  コメント
+-------------------------------------------------*/
+#coment{
+	margin:10px 0;
+}
+#coment h2{
+	margin-bottom:10px;
+}
+#coment h3{
+	font-size:10pt;
+	color:#000;
+	padding-left:5px;
+	border-bottom:1px #ccc solid;
+	border-left:10px #ccc solid;
+	margin-bottom:10px;
+} 
+#coment h4{
+	font-size:12pt;
+	margin: 0 0 5px 5px;
+}
+#coment h4 .date{
+	font-size:80%;
+	margin:0 3px;
+	font-weight:normal;
+}
+#coment .cbody{
+	margin:0 0 20px 10px;
+}
+#coment .commentform{
+	margin-top:0px;
+}
+
+
+/*-------------------------------------------------
+  フッター
+-------------------------------------------------*/
+#footer{
+	margin:20px 0 0 0;
+	padding:10px 0 20px 0;
+	text-align:center;
+	border-top:1Px #ccc solid;
+	clear:both;
+}
+
+
+/*-------------------------------------------------
+  Forms CSS for hnmSkins (08.02.19)
+-------------------------------------------------*/
+.loginform,.loginform *,
+.searchform,.searchform *,
+.commentform,.commentform *,
+.mailform,.mailform *{
+	font-size:12px;
+	line-height:1.5em;
+}
+#login,
+#search{
+	margin: 10px 0 0 10px;
+}
+.commentform,
+.mailform{
+	margin:10px 0 0 0;
+	padding: 10px;
+}
+.formfield{
+	display:block;
+	background: white;
+	color: #333;
+	border: 1px solid #868686;
+	border-color:#868686 #D4D2CF #D4D2CF #868686;
+	height:20px;
+}
+.formbutton{
+	display:block;
+	background: white;
+	color: #333;
+	border: 1px solid #868686;
+	border-color:#D4D2CF #868686 #868686 #D4D2CF;
+}
+.searchform .formfield{
+	width: 135px;
+	margin: 11px 0 0 10px;
+	display:inline;
+}
+.searchform .formbutton{
+	width: 50px;
+	margin: 10px 0 0 5px;
+	display:inline;
+	height:21px;
+}
+.loginform .formfield{
+	width: 185px;
+	padding: 2px 0;
+	margin: 0 0 2px 20px;
+	font-size:14px;
+}
+.loginform .formbutton{
+	width: 60px;
+	margin:5px 0 0 60px;
+}
+#login dt{
+	margin-bottom:10px;
+}
+#nucleus_lf_shared{
+	margin-left:20px;
+}
+#login .loginform a{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+.commentform,
+.mailform{
+	margin-left:10px;
+}
+#nucleus_cf_body,
+.mailform textarea{
+	width: 400px;
+	margin:0 0 10px 50px;
+	height:80px;
+}
+#nucleus_cf_name,
+#nucleus_cf_mail,
+#nucleus_cf_email,
+#nucleus_mmf_frommail{
+    width: 400px;
+    margin:0 0 10px 50px;
+}
+#nucleus_cf_remember{
+	margin-left: 50px;
+}
+.commentform .formbutton,
+.mailform .formbutton{
+	width: 100px;
+	height: 22px;
+	margin-left: 200px;
+}
+
+
+/*-------------------------------------------------
+  補助レイアウト (08.09.16)
+-------------------------------------------------*/
+.leftbox{float:left;}
+.rightbox{float:right;}
+
+.txtL{text-align:left;}
+.txtR{text-align:right;}
+.txtC{text-align:center;}
+
+.crL{clear:left;}
+.crR{clear:right;}
+.crB{clear:both;}
+
