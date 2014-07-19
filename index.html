@@ -19,7 +19,7 @@
 
   <div class="section-wrapper">
 
-    <section id="spec" class="section" style="background-image:url('hm-wb.png'); background-repeat:no-repeat">
+    <section id="spec" class="section" style="background-repeat:no-repeat">
       <div class="content">
         <div class="jacket-image" style="width:600px;">
             <img src="hm.png" alt="hm">
@@ -83,6 +83,33 @@
     </div>
   </footer>
 
+  <script type="text/javascript">
+    var body = document.getElementsByTagName("body")[0];
+    var content = document.getElementById("spec");
+    var img = document.querySelector("div.jacket-image img");
+    var slide = function(){
+      switch (body.className) {
+        case "js-slide1":
+          body.className = "js-slide2";
+          img.src = "ot.png";
+          content.style.backgroundImage = "url(ot-wb.png)";
+          break;
+        case "js-slide2":
+          body.className = "js-slide3";
+          img.src = "km.png";
+          content.style.backgroundImage = "url(km-wb.png)";
+          break;
+        case "js-slide3":
+        default:
+          body.className = "js-slide1";
+          img.src = "hm.png";
+          content.style.backgroundImage = "url(hm-wb.png)";
+          break;
+      }
+    }
+    slide();
+    body.addEventListener("transitionend", slide, true);
+  </script>
   <!--
   <script type="text/javascript">
     var _gaq = _gaq || [];

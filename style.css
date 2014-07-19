@@ -367,15 +367,6 @@ h6 a:hover {
 section.section {
     padding: 3em 0em;
 }
-section.section:nth-child(3n+1) {
-    background-color: #e86779;
-}
-section.section:nth-child(3n+2) {
-    background-color: #fff;
-}
-section.section:nth-child(3n+3) {
-    background-color: #3a3e4a;
-}
 .section:nth-child(3n+1),
 .section:nth-child(3n+3) {
     color: rgba(255, 255, 255, .8);
@@ -726,3 +717,30 @@ section.section:nth-child(3n+3) {
          url('aoyagireisyosimo_ttf_2_02.woff') format('woff');
 }
 
+.js-slide1 {
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: 5s;
+    background-color: #e86779;
+}
+.js-slide2 {
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: 5s;
+    background-color: #513ECF;
+}
+.js-slide3 {
+    -moz-transition-property: background-color;
+    -moz-transition-duration: 5s;
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 5s;
+    -o-transition-property: background-color;
+    -o-transition-duration: 5s;
+    background-color: #A2CF4A;
+}
