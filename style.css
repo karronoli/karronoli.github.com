@@ -713,8 +713,9 @@ section.section {
 
 @font-face {
     font-family: 'aoyagireisyosimo2';
-    src: url('aoyagireisyosimo_ttf_2_02.eot') format('eot'),
-         url('aoyagireisyosimo_ttf_2_02.woff') format('woff');
+    /* subset */
+    src: url('aoyagireisyosimo_ttf_2_02-sub.eot') format('eot'),
+         url('aoyagireisyosimo_ttf_2_02-sub.woff') format('woff');
 }
 
 .js-slide1 {
