@@ -383,8 +383,8 @@ section.section {
 #js-bg section .introduction {
     margin: 0em 0em 2em;
 }
-#js-bg section .table {
-    width: 560px;
+#info {
+    width: 90%;
 }
 #shadow {
     float: left;
