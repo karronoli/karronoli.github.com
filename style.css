@@ -416,16 +416,6 @@ section.section {
 .table ul {
     padding-left: 1em;
 }
-.social-buttons {
-    margin: 10px 0em 0em;
-    padding: 0em;
-    text-align: center;
-}
-.social-buttons li {
-    display: inline-block;
-    height: 20px;
-    padding: 10px 5px;
-}
 @media (min-width:1020px) {
     .content h1 {
         margin: 0 auto 0 -1em;
@@ -457,13 +447,13 @@ section.section {
 
 .js-slide1 {
     transition-property: background-color;
-    transition-duration: 5s;
+    transition-duration: 7s;
     -moz-transition-property: background-color;
-    -moz-transition-duration: 5s;
+    -moz-transition-duration: 7s;
     -webkit-transition-property: background-color;
-    -webkit-transition-duration: 5s;
+    -webkit-transition-duration: 7s;
     -o-transition-property: background-color;
-    -o-transition-duration: 5s;
+    -o-transition-duration: 7s;
     background-color: #e86779;
 }
 .js-slide2 {
