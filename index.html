@@ -17,45 +17,45 @@
 </head>
 <body>
 
-  <div class="section-wrapper">
-
-    <section id="spec" class="section" style="background-repeat:no-repeat">
+  <div style="background-repeat: no-repeat; background-image: url(hm-wb.png);"
+       class="" id="js-bg">
+    <section class="section">
       <div class="content">
-        <div class="jacket-image" style="width:600px;">
+        <div id="shadow">
             <img src="hm.png" alt="hm">
         </div>
 
-        <div style="width:400px;float:left;">
-          <h1 style="font-family: 'aoyagireisyosimo2'">
+        <div>
+          <h1 id="title">
             始動!
-          </h2>
-          <table class="table">
+          </h1>
+          <table id="info" class="table">
             <tbody>
               <tr>
                 <th>頒布日</th>
-                <td style="font-family: 'aoyagireisyosimo2'">未定</td>
+                <td>未定</td>
               </tr>
               <tr>
                 <th>価格</th>
-                <td style="font-family: 'aoyagireisyosimo2'">未定</td>
+                <td>未定</td>
               </tr>
             </tbody>
           </table>
         </div>
 
         <ul class="social-buttons" style="clear:both;">
-          <li class="social-button">
+          <!--<li class="social-button">
             <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          </li>
+          </li>-->
 
           <!--<li class="social-button">
             <div id="fb-root" style="display:inline;"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-like" data-href="http://www.otomasa.net/" data-send="false" data-width="400" data-show_faces="false" data-font="" style="display:inline;"></div>
           </li>-->
 
-          <li class="social-button">
+          <!--<li class="social-button">
             <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.otomasa.net%2F" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-          </li>
+          </li>-->
 
           <!--<li class="social-button">
             <div class="g-plusone" data-size="medium"></div>
@@ -84,31 +84,48 @@
   </footer>
 
   <script type="text/javascript">
-    var body = document.getElementsByTagName("body")[0];
-    var content = document.getElementById("spec");
-    var img = document.querySelector("div.jacket-image img");
-    var slide = function(){
-      switch (body.className) {
-        case "js-slide1":
-          body.className = "js-slide2";
-          img.src = "ot.png";
-          content.style.backgroundImage = "url(ot-wb.png)";
-          break;
-        case "js-slide2":
-          body.className = "js-slide3";
-          img.src = "km.png";
-          content.style.backgroundImage = "url(km-wb.png)";
-          break;
-        case "js-slide3":
-        default:
-          body.className = "js-slide1";
+    var body = document.querySelector("body > div");
+    var img = document.querySelector("#shadow img");
+    var _slide = function(){
+      var styles = [
+        function(){
           img.src = "hm.png";
-          content.style.backgroundImage = "url(hm-wb.png)";
-          break;
+          body.style.backgroundImage = "url(hm-wb.png)";
+          body.className = "js-slide1";
+        },
+        function(){
+          img.src = "ot.png";
+          body.style.backgroundImage = "url(ot-wb.png)";
+          body.className = "js-slide2";
+        },
+        function(){
+          img.src = "km.png";
+          body.style.backgroundImage = "url(km-wb.png)";
+          body.className = "js-slide3";
+        }
+      ];
+      var i = 0;
+      return function(){
+        return (i > styles.length - 1)? styles[i = 0](): styles[i++]();
       }
     }
+    var slide = _slide();
+    /* // NO WORK!?
+    if (body.attachEvent) {
+      body.attachEvent("ontransitionend", slide);
+      body.attachEvent("onmsTransitionEnd", slide);
+    }
+    else {
+      body.addEventListener("transitionend", slide, true);
+      body.addEventListener("webkitTransitionEnd", slide, true);
+      body.addEventListener("oTransitionEnd", slide, true);
+    }
     slide();
-    body.addEventListener("transitionend", slide, true);
+    */
+
+    // Use timer instead of transitionend event
+    setTimeout(slide, 500);
+    setInterval(slide, 5000);
   </script>
   <!--
   <script type="text/javascript">
