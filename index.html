@@ -24,8 +24,10 @@
         <div id="shadow">
             <img src="hm.png" alt="hm">
             <div style="text-align: right">
-              <a href="#next" name="#next" title="Next"
-                 onclick="setTimeout(slide, 500)">&gt;&gt;&gt;</a>
+              <a href="#pause" name="pause" title="Pause"
+                 id="js-pause">| |</a>
+              <a href="#next" name="next" title="Next"
+                 id="js-next">&gt;&gt;&gt;</a>
             </div>
         </div>
 
@@ -83,22 +85,26 @@
     var body = document.querySelector("#js-background");
     var img = document.querySelector("#shadow img");
     var _slide = function(){
+      var is_bold_img = (Math.random() < 0.9);
       var styles = [
         function(){
           img.src = "hm.png";
-          body.style.backgroundImage = "url(hm-wb.png)";
+          body.style.backgroundImage = is_bold_img?
+            "url(hm-wb.png)": "url(hm-wl.png)";
           body.className = body.className || "";
           setTimeout(function(){body.className = "js-slide1"}, 100)
         },
         function(){
           img.src = "ot.png";
-          body.style.backgroundImage = "url(ot-wb.png)";
+          body.style.backgroundImage = is_bold_img?
+            "url(ot-wb.png)": "url(ot-wl.png)";
           body.className = body.className || "";
           setTimeout(function(){body.className = "js-slide2"}, 100)
         },
         function(){
           img.src = "km.png";
-          body.style.backgroundImage = "url(km-wb.png)";
+          body.style.backgroundImage = is_bold_img?
+            "url(km-wb.png)": "url(km-wl.png)";
           body.className = body.className || "";
           setTimeout(function(){body.className = "js-slide3"}, 100)
         }
@@ -112,11 +118,30 @@
     if (body.attachEvent) {
       body.attachEvent("ontransitionend", slide);
       body.attachEvent("onmsTransitionEnd", slide);
+      document.getElementById("js-next")
+        .attachEvent("onclick", function() {
+          setTimeout(slide, 500)
+      });
+      document.getElementById("js-pause")
+        .attachEvent("onclick", function() {
+          body.detachEvent("ontransitionend", slide);
+          body.detachEvent("onmsTransitionEnd", slide);
+        });
     }
     else {
       body.addEventListener("transitionend", slide, true);
       body.addEventListener("webkitTransitionEnd", slide, true);
       body.addEventListener("oTransitionEnd", slide, true);
+      document.getElementById("js-next")
+        .addEventListener("click", function() {
+          setTimeout(slide, 500)
+        }, true);
+      document.getElementById("js-pause")
+        .addEventListener("click", function() {
+          body.removeEventListener("transitionend", slide, true);
+          body.removeEventListener("webkitTransitionEnd", slide, true);
+          body.removeEventListener("oTransitionEnd", slide, true);
+        });
     }
     setTimeout(slide, 500);
   </script>
