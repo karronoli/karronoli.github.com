@@ -17,60 +17,58 @@
 </head>
 <body>
 
-  <div class="section-wrapper">
-
-    <section id="spec" class="section" style="background-image:url('hm-wb.png'); background-repeat:no-repeat">
+  <div style="background-repeat: no-repeat; background-image: url(hm-wb.png);"
+       class="" id="js-background">
+    <section class="section">
       <div class="content">
-        <div class="jacket-image" style="width:600px;">
+        <div id="shadow">
             <img src="hm.png" alt="hm">
+            <div style="text-align: right">
+              <a href="#pause" name="pause" title="Pause"
+                 id="js-pause">| |</a>
+              <a href="#next" name="next" title="Next"
+                 id="js-next">&gt;&gt;&gt;</a>
+            </div>
         </div>
 
-        <div style="width:400px;float:left;">
-          <h1 style="font-family: 'aoyagireisyosimo2'">
+        <div>
+          <h1 id="title">
             始動!
-          </h2>
-          <table class="table">
+          </h1>
+          <table id="info" class="table">
             <tbody>
               <tr>
                 <th>頒布日</th>
-                <td style="font-family: 'aoyagireisyosimo2'">未定</td>
+                <td>未定</td>
               </tr>
               <tr>
                 <th>価格</th>
-                <td style="font-family: 'aoyagireisyosimo2'">未定</td>
+                <td>未定</td>
               </tr>
             </tbody>
           </table>
         </div>
+      </div>
 
-        <ul class="social-buttons" style="clear:both;">
-          <li class="social-button">
-            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          </li>
-
-          <!--<li class="social-button">
-            <div id="fb-root" style="display:inline;"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) {return;}js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="fb-like" data-href="http://www.otomasa.net/" data-send="false" data-width="400" data-show_faces="false" data-font="" style="display:inline;"></div>
-          </li>-->
-
-          <li class="social-button">
-            <a href="http://b.hatena.ne.jp/entry/http%3A%2F%2Fwww.otomasa.net%2F" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard-balloon" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
-          </li>
-
-          <!--<li class="social-button">
-            <div class="g-plusone" data-size="medium"></div>
-            <script type="text/javascript">
-              window.___gcfg = {lang: 'ja'};
-
-              (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-              })();
-            </script>
-          </li>-->
-        </ul>
-
+      <div style="margin: 0 auto; width:50%">
+        <div style="float:left">
+          <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div style="float:left">
+          <!-- Facebook -->
+          <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id; js.async = true;
+            js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+          <div class="socialbutton facebook-button">
+            <div class="fb-like" data-href="http://www.otomasa.net/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+          </div>
+        </div>
       </div>
     </section>
     
@@ -79,10 +77,74 @@
 
   <footer id="footer" style="background: #eef0f4;color: #9da3af;font-size: 90%;padding: 1ex 0ex;">
     <div class="content">
-      &copy;2014 ○×制作委員会
+      &copy;2014 乙女正宗製作委員会
     </div>
   </footer>
 
+  <script type="text/javascript">
+    var body = document.querySelector("#js-background");
+    var img = document.querySelector("#shadow img");
+    var _slide = function(){
+      var is_bold_img = (Math.random() < 0.9);
+      var styles = [
+        function(){
+          img.src = "hm.png";
+          body.style.backgroundImage = is_bold_img?
+            "url(hm-wb.png)": "url(hm-wl.png)";
+          body.className = body.className || "";
+          setTimeout(function(){body.className = "js-slide1"}, 100)
+        },
+        function(){
+          img.src = "ot.png";
+          body.style.backgroundImage = is_bold_img?
+            "url(ot-wb.png)": "url(ot-wl.png)";
+          body.className = body.className || "";
+          setTimeout(function(){body.className = "js-slide2"}, 100)
+        },
+        function(){
+          img.src = "km.png";
+          body.style.backgroundImage = is_bold_img?
+            "url(km-wb.png)": "url(km-wl.png)";
+          body.className = body.className || "";
+          setTimeout(function(){body.className = "js-slide3"}, 100)
+        }
+      ];
+      var i = -1;
+      return function(){
+        return (i == styles.length - 1)? styles[i = 0](): styles[++i]();
+      }
+    }
+    var slide = _slide();
+    if (body.attachEvent) {
+      body.attachEvent("ontransitionend", slide);
+      body.attachEvent("onmsTransitionEnd", slide);
+      document.getElementById("js-next")
+        .attachEvent("onclick", function() {
+          setTimeout(slide, 500)
+      });
+      document.getElementById("js-pause")
+        .attachEvent("onclick", function() {
+          body.detachEvent("ontransitionend", slide);
+          body.detachEvent("onmsTransitionEnd", slide);
+        });
+    }
+    else {
+      body.addEventListener("transitionend", slide, true);
+      body.addEventListener("webkitTransitionEnd", slide, true);
+      body.addEventListener("oTransitionEnd", slide, true);
+      document.getElementById("js-next")
+        .addEventListener("click", function() {
+          setTimeout(slide, 500)
+        }, true);
+      document.getElementById("js-pause")
+        .addEventListener("click", function() {
+          body.removeEventListener("transitionend", slide, true);
+          body.removeEventListener("webkitTransitionEnd", slide, true);
+          body.removeEventListener("oTransitionEnd", slide, true);
+        });
+    }
+    setTimeout(slide, 500);
+  </script>
   <!--
   <script type="text/javascript">
     var _gaq = _gaq || [];
