@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+  "http://www.w3.org/TR/MathML2/dtd/xhtml-math11-f.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="Author" content="p08831" />
+
+    <title>Euler Simulation</title>
+
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body>
+    <div id="euler_simulation">
+      <p>This page is <a href="./euler_simulation.xhtml">euler_simulation.xhtml</a>
+      for MathML.</p>
+      <p>TimeResponse for RC series circuit euler_simulation by canvas,
+        support Firefox3 only.</p>
+      <div style="float:left;margin:1em;">
+        <img src="euler_simulation_circuit.png" alt="circuit" />
+        <p style="text-align:center">fig. CR series circuit</p>
+      </div>
+       <!--
+           <ol style="float:left;">
+             <li>
+               <ul>
+                 <li>V:red</li>
+                 <li>I:blue</li>
+               </ul>
+             </li>
+             <li>
+               <ul>
+                 <li>V:green</li>
+                 <li>I:magenta</li>
+               </ul>
+             </li>
+             <li>
+               <ul>
+                 <li>V:red+green</li>
+                 <li>I:blue+magenta</li>
+               </ul>
+             </li>
+           </ol>
+           -->
+       <div style="float:left;margin:1em;">
+         <p>theoretical formula(MathML)</p>
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+           <msub>
+             <mi>v</mi>
+             <mi>c</mi>
+           </msub>
+           <mo>=</mo>
+           <mo mathvariant="italic">E</mo>
+           <mo>(</mo>
+           <mn>1</mn>
+           <mo>-</mo>
+
+           <msup>
+             <mi>&ExponentialE;</mi>
+             <mrow>
+               <mo>-</mo>
+               <mfrac>
+                 <mi>t</mi>
+                 <mn>&tau;</mn>
+               </mfrac>
+           </mrow>
+           </msup>
+           <mo>)</mo>
+         </math>
+         <br/>
+
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+           <mi>i</mi>
+           <mo>=</mo>
+           <mfrac>
+             <mi mathvariant="italic">E</mi>
+             <mn mathvariant="italic">R</mn>
+           </mfrac>
+
+           <msup>
+             <mi>&ExponentialE;</mi>
+             <mrow>
+               <mo>-</mo>
+               <mfrac>
+                 <mi>t</mi>
+                 <mn>&tau;</mn>
+               </mfrac>
+             </mrow>
+           </msup>
+
+
+         </math>
+       </div>
+       <div style="float:left;margin:1em;">
+         <p>simulation formula(MathML</p>
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+           <mi>v</mi>
+           <mo>(</mo>
+           <msub>
+             <mi>t</mi>
+             <mrow>
+               <mi>k</mi>
+               <mo>+</mo>
+               <mn>1</mn>
+             </mrow>
+           </msub>
+           <mo>)</mo>
+           <mo>=</mo>
+           <mi>v</mi>
+           <mo>(</mo>
+           <msub>
+             <mi>t</mi>
+             <mi>k</mi>
+           </msub>
+           <mo>)</mo>
+           <mo>+</mo>
+
+           <mfrac>
+             <mrow>
+               <mi>i</mi>
+               <mo>(</mo>
+               <msub>
+                 <mi>t</mi>
+                 <mi>k</mi>
+               </msub>
+               <mo>)</mo>
+             </mrow>
+             <mn>C</mn>
+           </mfrac>
+
+           <!--
+               <mfrac bevelled="true">
+                 <mn>1</mn>
+                 <mn>C</mn>
+               </mfrac>
+               <mi>&nbsp;</mi>
+               <mi>i</mi>
+               <mo>(</mo>
+               <msub>
+                 <mi>t</mi>
+                 <mi>k</mi>
+               </msub>
+               <mo>)</mo>
+               <mi>&nbsp;</mi>
+               -->
+           <mi>&Delta;</mi>
+           <mi>t</mi>
+         </math>
+
+
+         <br/>
+
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+           <mi>i</mi>
+           <mo>=</mo>
+           <mfrac>
+             <mrow>
+               <mi mathvariant="italic">E</mi>
+               <mo>-</mo>
+               <mi mathvariant="italic">v</mi>
+             </mrow>
+             <mn mathvariant="italic">R</mn>
+           </mfrac>
+         </math>
+       </div>
+       <div style="clear:both;">&nbsp;</div>
+       <div style="float:left;">
+         result
+         <ul>
+           <li><a href="euler_simulation.png">euler_simulation.png</a></li>
+           <li><a href="theoretical.png">theoretical.png</a></li>
+           <li><a href="Simulation_Theoretical.png">Simulation_Theoretical.png</a></li>
+           <li><a href="euler_simulation.js">euler_simulation.js(js source)</a></li>
+           <li><a href="euler_simulation.f95">euler_simulation.f95(fortran95 source)</a></li>
+           <li><a href="euler_simulation.f">euler_simulation.f(fortran77 source)</a></li>
+           <li><a href="euler_simulation_circuit.eps">euler_simulation_circuit.eps</a></li>
+         </ul>
+       </div>
+<!--
+       <div style="clear:both;">&nbsp;</div>
+-->
+    </div>
+
+    <script type="text/javascript" src="euler_simulation.js"></script>
+  </body>
+</html>
