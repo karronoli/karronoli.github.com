@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>なんかの計算</title>
+</head>
+<body><div>
+<h3>なんかの計算:<a href="/wiki/">関連するページ</a></h3>
+<hr />
+<section>
+<div>
+<h4>MathMLな数式:</h4>
+<!--
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+             <tan>
+                <mn>1</mn>
+             </tan>
+         </math>
+         
+         <br/>
+         -->
+         
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+             <mi>α</mi>
+             <mo>=</mo>
+             <mfrac>
+               <mrow>
+               <mi>tan</mi>
+               <mfrac>
+                 <mrow><msub><mi>ω</mi><mi>c</mi></msub></mrow>
+                 <mn>2</mn>
+               </mfrac>
+               <mo>-</mo><mn>1</mn>
+               </mrow>
+               
+               <mrow>
+               <mi>tan</mi>
+               <mfrac>
+                 <mrow><msub><mi>ω</mi><mi>c</mi></msub></mrow>
+                 <mn>2</mn>
+               </mfrac>
+               <mo>+</mo><mn>1</mn>
+               </mrow>
+             </mfrac>
+         </math>
+         ⇔
+         <math xmlns="http://www.w3.org/1998/Math/MathML">
+             <msub><mi>ω</mi><mi>c</mi></msub>
+             <mo>=</mo>
+             <mn>2</mn>
+             <mi>arctan</mi>
+             <mfrac>
+               <mrow>
+               <mn>1</mn>
+               <mo>+</mo><mi>α</mi>
+               </mrow>
+               
+               <mrow>
+               <mn>1</mn>
+               <mo>-</mo><mi>α</mi>
+               </mrow>
+             </mfrac>
+         </math>
+
+</div>
+<hr />
+
+<div>
+<h4>&omega;<span style="vertical-align: sub;">c</span>&rarr;&alpha;(0&le;&omega;<span style="vertical-align: sub;">c</span>&le;π,-1&le;&alpha;&le;1):</h4>
+<textarea id="result1" cols="32" rows="8"></textarea>
+<input type="button" onclick="coef1()" value="coef1" />
+</div>
+<hr />
+
+<div>
+<h4>&alpha;→&omega;<span style="vertical-align: sub;">c</span>(0&le;&omega;<span style="vertical-align: sub;">c</span>&le;π,-1&le;&alpha;&le;1):</h4>
+<textarea id="result2" cols="32" rows="8"></textarea>
+<input type="button" onclick="coef2()" value="coef2" />
+</div>
+<hr />
+
+<div>
+<h4>f<span style="vertical-align: sub;">c</span>[Hz]→&rarr;&alpha;(-1&le;&alpha;&le;1,0&le;f<span style="vertical-align: sub;">c</span>&lt;ナイキスト周波数):</h4>
+<form name="result3" action="#result3" onsubmit="coef3()">
+(入力)ナイキスト周波数[Hz]:<input type="text" value="24000" id="fmax" /><br />
+(入力)遮断周波数f<span style="vertical-align: sub;">c</span>[Hz]:<input type="text" value="12000" id="f" /><br />
+(出力)&alpha;:<input type="text" value="" id="result3" />
+<input type="submit"  value="push or Enter" />
+</form>
+</div>
+<hr />
+
+<div>
+<h4>&alpha;-&gt;f<span style="vertical-align: sub;">c</span>[Hz](-1&le;&alpha;&le;1,0&le;f<span style="vertical-align: sub;">c</span>&lt;ナイキスト周波数):</h4>
+<form name="result4" action="#result4" onsubmit="coef4()">
+(入力)ナイキスト周波数[Hz]:<input type="text" value="24000" id="fmax2" /><br />
+(入力)&alpha;:<input type="text" value="0" id="alpha" /><br />
+(出力)遮断周波数f<span style="vertical-align: sub;">c</span>[Hz]:<input type="text" value="" id="result4" />
+<input type="submit"  value="push or Enter" />
+</form>
+</div>
+<hr />
+
+<div>
+<h4>2byteで表わせる数値を-1から+1の1.15固定小数点表現された値として見て10進小数に変換</h4>
+<ul>
+<li>0x7FFF →  0.999969482421875</li>
+<li>0x4000 →  0.5</li>
+<li>0x0001 →  0.000030517578125 =  3.0517578125e-5</li>
+<li>0x8001 → -0.000030517578125 = -3.0517578125e-5</li>
+<li>0xC000 → -0.5</li>
+<li>0xFFFF → -0.999969482421875</li>
+</ul>
+<form name="result5" action="#result5" onsubmit="coef5()">
+(入力)2byteの数値:<input type="text" value="0x4000" id="input16" /><br />
+(出力)固定小数点:<input type="text" value="" id="result5" size="30" />
+<input type="submit"  value="push or Enter" />
+</form>
+</div>
+<hr />
+
+<div>
+<h4>4byteで表わせる数値を-1から+1の1.31固定小数点表現された値として見て10進小数に変換</h4>
+<ul>
+<li>0x7FFFFFFF →  0.9999999995343387</li>
+<li>0x40000000 →  0.5</li>
+<li>0x00000001 →  4.656612873077393e-10</li>
+<li>0x80000001 → -4.656612873077393e-10</li>
+<li>0xC0000000 → -0.5</li>
+<li>0xFFFFFFFF → -0.9999999995343387</li>
+</ul>
+<form name="result6" action="#result6" onsubmit="coef6()">
+(入力)4byteの数値:<input type="text" value="0x40000000" id="input32" /><br />
+(出力)固定小数点:<input type="text" value="" id="result6" size="30" />
+<input type="submit"  value="push or Enter" />
+</form>
+</div>
+
+
+</section>
+</div></body>
+<script type="text/javascript">
+"use strict";
+
+var $ = function(id){return document.getElementById(id);}
+
+// regular 0 < w < PI
+// ω→α
+var coef1 = function() {
+
+  //var threshold = 200;
+  //var length = 20;
+
+  var threshold = 1;
+  var length = 10;
+  var result = [];
+  for (var i = 0; i < threshold; i+=threshold/length) {
+//  for (var i = 0; i < threshold; i+=length) {
+    //result.value +=  Math.ceil(i*10)/10 + ":" + (Math.tan(i/2)-1)/(Math.tan(i/2)+1) + "\n"
+    // 標本化周波数が2pi*fなので,最大でも周波数はpi*f(ナイキスト周波数), 
+    result.push(Math.floor(Math.PI*i*100)/100 + ":" + (Math.tan(Math.PI*i/2)-1)/(Math.tan(Math.PI*i/2)+1));
+  }
+  $("result1").innerHTML = result.join("\n");
+}
+
+// regular -1 < a < 1
+// α→ω
+var coef2 = function(){
+  var result = [];
+  var threshold = 1.0;
+  var length = 10;
+  //var threshold = 1000.0;
+  //var length = 50;
+  for (var i = -threshold; i < threshold; i+=threshold/length) {
+    result.push(Math.floor(i*10)/10 + ":" + 2*Math.atan((1+i)/(1-i)));
+  }
+  $("result2").innerHTML = result.join("\n");
+}
+
+// (-1≤α≤1)
+// f[Hz]->α
+var coef3 = function() {
+
+  var result = $("result3");
+  var f = Number($("f").value);
+  var fmax = Number($("fmax").value);
+  if (f > fmax) {result.value = "error";return -1;}
+  else if (f*2 == fmax) {result.value = 0;return 1;}
+  else {
+    //var regular_freq = f/fmax*Math.PI*2; // omega = 2*pi*f,こっちは機械的な変換.fを1Hzに正規化する
+    // じゃないなpi*fで正規化するので
+    var regular_freq = f/fmax*Math.PI;
+    //result.value =  regular_freq + ":" + (Math.tan(regular_freq/2)-1)/(Math.tan(regular_freq/2)+1);
+    result.value =  (Math.tan(regular_freq/2)-1)/(Math.tan(regular_freq/2)+1);
+  }
+    
+}
+
+// (0≤α≤fmax):
+// α->f[Hz]
+var coef4 = function() {
+
+  var result = $("result4");
+  var alpha = Number($("alpha").value);
+  if (alpha <= -1 || alpha >= 1) {result.value = "error";return -1;}
+  var fmax = Number($("fmax2").value);
+  //var regular_freq = Math.atan((1+alpha)/(1-alpha))/Math.PI; // coef3コメント参照
+  var regular_freq = 2*Math.atan((1+alpha)/(1-alpha))/Math.PI; 
+  if (0 < regular_freq && regular_freq < 1) {
+    result.value = regular_freq*fmax;
+  } else {
+    alert("正規化周波数 "+regular_freq);
+  }
+  //console.log("alpha:%f,fmax:%f,regular_freq:%f", alpha, fmax, regular_freq);
+  
+}
+/*
+0x7FFF ->  0.999969482421875
+0x4000 ->  0.5
+0xC000 -> -0.5
+0xFFFF -> -0.999969482421875
+*/
+var coef5 = function() {
+
+  var result = $("result5");
+  var input16 = parseInt($("input16").value);
+  //if (input16 < -32768 || input16 > 32767) result.value = "error";
+  if (input16 < 0x0 || input16 > 0xFFFF) {result.value = "error";return -1;}
+  var sum = 0;
+  var sign = (input16 & 0x8000)?-1:1;
+  if (input16 & 0x8000) {
+    result.value = 1-input16/32768;
+  } else {
+    result.value = input16/32768;
+  }
+  /*
+  input16=(input16<<1)&0xFFFF;
+  for(i = 0; input16; input16=(input16<<1)&0xFFFF,++i) {
+    if (!(input16 & 0x8000)) continue;
+    //tmp = (input16 & 0x8000)? 1:0;
+    sum += 1/(2<<i)
+    //console.log(i, sum)
+  }
+  result.value = sign*sum;
+  */
+}
+
+/*
+0x40000000 ->  0.5
+0xC0000000 -> -0.5
+*/
+var coef6 = function() {
+
+  var result = $("result6");
+  var input32 = parseInt($("input32").value);
+  //if (input16 < -32768 || input16 > 32767) result.value = "error";
+  if (input32 < 0x0 || input32 > 0xFFFFFFFF) {result.value = "error";return -1;}
+  var sum = 0;
+  var sign = (input32 & 0x80000000)?-1:1;
+  // 符号付き4byte整数で表現できない整数を初めから定数として書いとくと計算結果が指数表現になる.
+  if (input32 & 0x80000000) {
+    result.value = 1-input32/2147483648;
+  } else {
+    result.value = input32/2147483648;
+  }
+  /*
+  // origin code
+  input32=(input32<<1)&0xFFFFFFFF;
+  for(i = 0; input32; input32=(input32<<1)&0xFFFFFFFF,++i) {
+    if (!(input32 & 0x80000000)) continue;
+    //sum += 1/(2<<i)
+    sum += Math.pow(0.5, i+1);
+    //console.log(i, sum)
+  }
+  result.value = sign*sum;
+  */
+}
+
+</script>
+</html>

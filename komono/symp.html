@@ -1,0 +1,38 @@
+<html>
+
+<body><div>
+<p>シンプソンの公式の中身。hは知らん</p>
+<div>
+<p>result:</p>
+<textarea id="result" cols="32" rows="8"></textarea>
+<input type="button" onclick="symp()" value="symp" />
+</div>
+<p>input data:</p>
+<textarea id="symp" cols="48" rows="25"></textarea>
+</div></body>
+<script>
+var symp = function() {
+var data_array = document.getElementById("symp").value.split("\n");
+var result = document.getElementById("result");
+result.value += "number of data:" + data_array.length + "\n";
+for (var i = 0; i < data_array.length; ++i) {
+  data_array[i] = Number(data_array[i]);
+  //data_array[i] = data_array[i] - 0.0;
+}
+
+var first = data_array.shift();
+var last = data_array.pop();
+var odd_sum = 0.0, even_sum = 0.0;
+//var odd_sum = Number(), even_sum = Number();
+for (var i = 1; i < data_array.length/2; ++i) {
+  odd_sum += data_array[2*i-1];
+}
+for (var i = 1; i < data_array.length/2-1; ++i) {
+  even_sum += data_array[2*i];
+}
+
+result.value +=  (first + 2*even_sum + 4*odd_sum + last) + "\n";
+}
+
+</script>
+</html>
