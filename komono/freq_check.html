@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta name="Date" content="2010-02-03" />
 <title>なんかの計算</title>
 </head>
 <body><div>
@@ -16,10 +17,10 @@
                 <mn>1</mn>
              </tan>
          </math>
-         
+
          <br/>
          -->
-         
+
          <math xmlns="http://www.w3.org/1998/Math/MathML">
              <mi>α</mi>
              <mo>=</mo>
@@ -32,7 +33,7 @@
                </mfrac>
                <mo>-</mo><mn>1</mn>
                </mrow>
-               
+
                <mrow>
                <mi>tan</mi>
                <mfrac>
@@ -54,7 +55,7 @@
                <mn>1</mn>
                <mo>+</mo><mi>α</mi>
                </mrow>
-               
+
                <mrow>
                <mn>1</mn>
                <mo>-</mo><mi>α</mi>
@@ -157,7 +158,7 @@ var coef1 = function() {
   for (var i = 0; i < threshold; i+=threshold/length) {
 //  for (var i = 0; i < threshold; i+=length) {
     //result.value +=  Math.ceil(i*10)/10 + ":" + (Math.tan(i/2)-1)/(Math.tan(i/2)+1) + "\n"
-    // 標本化周波数が2pi*fなので,最大でも周波数はpi*f(ナイキスト周波数), 
+    // 標本化周波数が2pi*fなので,最大でも周波数はpi*f(ナイキスト周波数),
     result.push(Math.floor(Math.PI*i*100)/100 + ":" + (Math.tan(Math.PI*i/2)-1)/(Math.tan(Math.PI*i/2)+1));
   }
   $("result1").innerHTML = result.join("\n");
@@ -193,7 +194,7 @@ var coef3 = function() {
     //result.value =  regular_freq + ":" + (Math.tan(regular_freq/2)-1)/(Math.tan(regular_freq/2)+1);
     result.value =  (Math.tan(regular_freq/2)-1)/(Math.tan(regular_freq/2)+1);
   }
-    
+
 }
 
 // (0≤α≤fmax):
@@ -205,14 +206,14 @@ var coef4 = function() {
   if (alpha <= -1 || alpha >= 1) {result.value = "error";return -1;}
   var fmax = Number($("fmax2").value);
   //var regular_freq = Math.atan((1+alpha)/(1-alpha))/Math.PI; // coef3コメント参照
-  var regular_freq = 2*Math.atan((1+alpha)/(1-alpha))/Math.PI; 
+  var regular_freq = 2*Math.atan((1+alpha)/(1-alpha))/Math.PI;
   if (0 < regular_freq && regular_freq < 1) {
     result.value = regular_freq*fmax;
   } else {
     alert("正規化周波数 "+regular_freq);
   }
   //console.log("alpha:%f,fmax:%f,regular_freq:%f", alpha, fmax, regular_freq);
-  
+
 }
 /*
 0x7FFF ->  0.999969482421875
