@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>redpen-paragraph.el の紹介</title>
+<!-- 2016-05-13 金 01:36 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="karronoli" />
+<meta  name="description" content="Emacs から RedPen を使う elisp パッケージの紹介"
+ />
+<meta  name="keywords" content="RedPen， Emacs， elisp， proofread" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">redpen-paragraph.el の紹介</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. redpen-paragraph.el の紹介</a></li>
+<li><a href="#sec-2">2. RedPen の紹介</a></li>
+<li><a href="#sec-3">3. クイックスタートガイド</a></li>
+<li><a href="#sec-4">4. redpen-paragraph.el をなぜ作ったか？</a></li>
+<li><a href="#sec-5">5. なにができる？</a>
+<ul>
+<li><a href="#sec-5-1">5.1. 文章単位での校正</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. org-mode での校正</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. ファイル単位での校正</a></li>
+<li><a href="#sec-5-3">5.3. 入力言語の判定</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. 注意点</a>
+<ul>
+<li><a href="#sec-6-1">6.1. デモ用途 redpen-server</a></li>
+<li><a href="#sec-6-2">6.2. Emacs の日本語カウント</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. 今後の予定</a></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> redpen-paragraph.el の紹介</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+マニュアルを書く機会があったので redpen-paragrah.el と
+いう Emacs Lisp パッケージを作ってみた．
+</p>
+
+<p>
+<a href="https://github.com/karronoli/redpen-paragraph.el">karronoli/redpen-paragraph.el: RedPen interface for proofreading paragraph.</a>
+</p>
+
+<p>
+これによって Emacs から RedPen をいい感じに使うことができる．
+この elisp は作ってから1年位使っていて，
+せっかくなので今回の記事を起こした．
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> RedPen の紹介</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a href="http://redpen.cc/">http://redpen.cc/</a> より引用．
+</p>
+<blockquote>
+<p>
+RedPen はプログラマや記者が規約にしたがって文書 (マニュアルやソフトウェアドキュメント) を記述するのをサポートします。
+RedPen は自然言語で記述された入力文書のチェックを自動化します。
+</p>
+</blockquote>
+<p>
+RedPen には入力文書のフォーマットがいくつかあって，
+Markdown や AsciiDoc， LaTex 等サポートされてる．
+Pull Request や Issue もいい感じに対応してくれる．
+<a href="https://github.com/redpen-cc/redpen/issues?utf8=%E2%9C%93&q=is:issue+author:karronoli+">GitHub</a>
+ArchLinux ユーザは <a href="https://aur.archlinux.org/packages/redpen/">AUR (en) - redpen</a> を使っておくと
+systemd から使えるので良かったらどうぞ．
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> クイックスタートガイド</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+どこかのキーに redpen-paragraph を割り当てて任意の文章上で起動．
+C-u 付きで起動すればファイル単位を校正できる．
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(define-key global-map (kbd <span style="color: #8b2252;">"C-c C-r"</span>) 'redpen-paragraph)
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="redpen-paragraph.gif" alt="redpen-paragraph.gif" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> redpen-paragraph.el をなぜ作ったか？</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Emacs で org-mode に対して校正したかったから．
+それと RedPen は org-mode に対応していなかったから．
+org-mode のフォーマットは <b>基本的には</b> 複雑なものじゃない．
+org-mode の 正規表現をコピペすればそこそこ実用的なものは作れると思う．
+だけど細かい変更に追従できる気がしない．
+</p>
+
+<p>
+それならファイルの部分ごと，文章単位で校正できれば org-mode 以外にも
+使えるんじゃないだろうか？ （例： ソースコードのコメント）
+</p>
+
+<p>
+以上の理由から redpen-paragraph.el を作った．
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> なにができる？</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> 文章単位での校正</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+M-x redpen-paragraph でカーソル上にある文章を redpen-server に投げて，
+返ってきた結果を compilation-mode で表示する．
+エラーがあれば，その項目を選んで文書中の該当箇所に飛べる．
+ただし毎回 M-x から呼ぶのは億劫なので，任意のキーに割り当てて
+使うことを想定している．
+</p>
+</div>
+
+<div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> org-mode での校正</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+文章中の非表示文字を無視して，表示文字に対して校正する．
+redpen-paragraph-alist をカスタマイズすることでメジャーモードごとに
+挙動を変更できる．
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> ファイル単位での校正</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+キー割り当てをして C-u を付けて呼ぶと一時的にファイル単位で校正する．
+常にファイル単位で校正したい場合は .emacs.el に以下の記述をする．
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">defvar</span> <span style="color: #a0522d;">redpen-paragraph-force-reading-whole</span> t)
+</pre>
+</div>
+<p>
+常にファイル単位で校正したい場合は flycheck も検討するといいと思う．
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> 入力言語の判定</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+RedPen は英語と日本語に対応している．
+入力文章が ASCII 範囲内の文字とそれ以外の範囲の文字が混ざってる場合，
+それぞれの文字数の比に応じて RedPen の使用言語を切り替える．
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> 注意点</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> デモ用途 redpen-server</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+elisp のインストール直後で利用できる redpen-server は
+自分が Heroku にデモ用途として設置している．
+セキュリティや応答性，サービスの継続性を気にする場合は
+各自でサーバを立てること．
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Emacs の日本語カウント</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Emacs は日本語の1文字を2文字分として解釈する．なので
+エラー場所を表示するときに，日本語のある場所への正確な位置は
+できない．この挙動を変える設定はどこにあるんだろう…
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> 今後の予定</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+RedPen には欲しい機能や「？」な挙動が
+幾らかあるので JavaScript や Issue で
+今後も突っついていきたいと思う．
+redpen-paragraph.el は json2 フォーマットを使うように変更する．
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2016-05-13 金 01:25&gt;</span></span></p>
+<p class="author">Author: karronoli</p>
+<p class="date">Created: 2016-05-13 金 01:36</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

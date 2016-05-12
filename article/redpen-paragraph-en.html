@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Introduce of redpen-paragraph.el</title>
+<!-- 2016-05-13 金 01:38 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="karronoli" />
+<meta  name="description" content="Introduce of the elisp package to use RedPen by Emacs."
+ />
+<meta  name="keywords" content="RedPen， Emacs， elisp， proofread" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Introduce of redpen-paragraph.el</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduce of redpen-paragraph.el</a></li>
+<li><a href="#sec-2">2. Introduce of RedPen</a></li>
+<li><a href="#sec-3">3. Quick start guide</a></li>
+<li><a href="#sec-4">4. Why did I create redpen-paragraph.el?</a></li>
+<li><a href="#sec-5">5. What can?</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Proofread the paragraph</a>
+<ul>
+<li><a href="#sec-5-1-1">5.1.1. Proofread in org-mode</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-2">5.2. Proofread a file</a></li>
+<li><a href="#sec-5-3">5.3. Detect the languages</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Caution</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Demo redpen-server</a></li>
+<li><a href="#sec-6-2">6.2. Character count of Japanese on Emacs</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Future plan</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduce of redpen-paragraph.el</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This article is translated on the article. <a href="http://d.hatena.ne.jp/karronoli/20160512">http://d.hatena.ne.jp/karronoli/20160512</a>
+</p>
+
+<p>
+I had the opportunity to write the manual,
+I had created redpen-paragraph.el as Emacs Lisp package.
+</p>
+
+<p>
+<a href="https://github.com/karronoli/redpen-paragraph.el">karronoli/redpen-paragraph.el: RedPen interface for proofreading paragraph.</a>
+</p>
+
+<p>
+I can use better RedPen by using this.
+It has passed about a year since created.
+I have written this artcle because long-awaited.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Introduce of RedPen</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Quoted from <a href="http://redpen.cc/">http://redpen.cc/</a>
+</p>
+<blockquote>
+<p>
+RedPen is a proofreading tool to help writers or programmers who write technical documents or
+manuals that need to adhere to a writing standard.
+</p>
+</blockquote>
+<p>
+RedPen supports some input file format,
+Markdown, AsciiDoc and LaTex, etc.
+RedPen developer member correct the issues I found.
+<a href="https://github.com/redpen-cc/redpen/issues?utf8=%E2%9C%93&q=is:issue+author:karronoli+">GitHub</a>
+If you are ArchLinux user, Try <a href="https://aur.archlinux.org/packages/redpen/">AUR (en) - redpen</a>.
+if need, you can use from systemd.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Quick start guide</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Hit the key binded redpen-paragraph on any paragraph.
+Hit the key with C-u to proofread a file.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(define-key global-map (kbd <span style="color: #8b2252;">"C-c C-r"</span>) 'redpen-paragraph)
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="redpen-paragraph.gif" alt="redpen-paragraph.gif" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Why did I create redpen-paragraph.el?</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Because I want to proofread the org-mode in Emacs,
+and RedPen did not correspond to the org-mode.
+org-mode format is not so much complexity <b>basically</b>.
+</p>
+
+<p>
+I think I may create the practical implementation if the use of the regular expression of org-mode.
+But I can't follow the trivial org-mode changes.
+Well, a part of the file, any paragraph can be proofreaded
+in additon to org-mode, isn't it?
+(Example: source code comments)
+</p>
+
+<p>
+I had created redpen-paragraph.el from the above reasons.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> What can?</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Proofread the paragraph</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+M-x redpen-paragraph.
+You request the paragraph on cursor to redpen-server,
+view the errors by compilation-mode.
+You can jump the error position if found the error.
+But you should set a key binding.
+</p>
+</div>
+
+<div id="outline-container-sec-5-1-1" class="outline-4">
+<h4 id="sec-5-1-1"><span class="section-number-4">5.1.1</span> Proofread in org-mode</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+You can proofread the visible text ignoring the invisible text in the paragraph.
+To change this behavior,
+You customize redpen-paragraph-alist variable per major-mode.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Proofread a file</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Invoke with the prefix key(C-u), You can proofread to a original file.
+To proofread a original file always, add the bellow line to .emacs.el.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp">(<span style="color: #a020f0;">defvar</span> <span style="color: #a0522d;">redpen-paragraph-force-reading-whole</span> t)
+</pre>
+</div>
+<p>
+Or, You should consider using flycheck also.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Detect the languages</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+RedPen support English and Japanese.
+The input text contains ASCII and not ASCII,
+it switch the language of RedPen in accordance with the ratio of English and not English.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Caution</h2>
+<div class="outline-text-2" id="text-6">
+</div><div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Demo redpen-server</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+The redpen-server that can be used after installation of the elisp is
+demo use only. It is installed to my Heroku application.
+You worry About security, response speed and continuity of service,
+You must make a server instance on somewhere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Character count of Japanese on Emacs</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Emacs counts the one character of Japanese as two characters.
+It can't point correct offset of the line with Japanese character by the reason.
+I wonder if the setting of this behavior is where&#x2026;
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Future plan</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+I want to make a JavaScript Extension or issues, because RedPen have
+Ambiguous behavior, and don't have the function I want.
+The plan of redpen-paragraph.el is to change to use the json2 format.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: karronoli</p>
+<p class="date">Created: 2016-05-13 金 01:38</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
